@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <title>Cadastro</title>
+   
+  </head>
+    <div class="container">
+      <div class="form">
+        <form action="/cadastro" method="post">
+          <div class="form-header">
+            <div class="title">
+              <h1>Cadastre-se</h1>
+            </div>
+            <div class="login-button">
+              <button><a href="/login">Entrar</a></button>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="container-a">
+              <div class="input-box">
+                <label for="firstname">Primeiro nome</label>
+                <input
+                  type="text"
+                  id="f_name"
+                  name="f_name"
+                  placeholder="Digite seu primeiro nome"
+                  required
+                  class="form_control"
+                />
+              </div>
+
+              <div class="input-box">
+                <label for="lastname">Sobrenome</label>
+                <input
+                  type="text"
+                  id="l_name"
+                  name="l_name"
+                  placeholder="Digite seu sobrenome"
+                  required
+                  class="form-control"
+                />
+              </div>
+
+              <div class="input-box">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Digite seu email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="container-b">
+              <div class="input-box">
+                <label for="date">Data de nascimento</label>
+                <input
+                  type="date"
+                  id="birthdata"
+                  name="birthdata"
+                  placeholder="Data de aniversário"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <label for="password">Senha</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Digite sua senha"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <label for="password_conf">Confirme sua senha</label>
+                <input
+                  type="password"
+                  id="password_c"
+                  name="password_c"
+                  placeholder="Digite sua senha novamente"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="gender-inputs">
+            <div class="gender-title">
+              <h6>Gênero</h6>
+            </div>
+
+            <div class="gender-group" id="gender-group">
+              <div class="gender-input">
+                <input type="radio" id="feminino" name="genero" />
+                <label for="feminino">Feminino</label>
+              </div>
+              <br />
+              <div class="gender-input">
+                <input type="radio" id="masculino" name="genero" />
+                <label for="male">Masculino</label>
+              </div>
+              <br />
+              <div class="gender-input">
+                <input type="radio" id="others" name="genero" />
+                <label for="others">Outros</label>
+              </div>
+            </div>
+          </div>
+          <div class="continue-button">
+            <button type="submit" class="continue">Continuar</a></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

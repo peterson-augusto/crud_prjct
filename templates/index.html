@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuário</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body style="background-color: #03aee2">
+    <h1 style="text-align: center">Usuários</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="/cadastro">Adicionar Usuários</a>
+        </div>
+        <div class="col-xs-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Email</th>
+                <th>Nascimento</th>
+                <th>Gênero</th>
+                <th>Senha</th>
+                <th>Opções</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for u in usuarios %}
+              <tr>
+                <td>{{u.f_name}}</td>
+                <td>{{u.l_name}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.birthdata}}</td>
+                <td>{{u.genre}}</td>
+                <td>{{u.password}}</td>
+                <td>
+                  <a href="/delete/{{u.id}}">Deletar</a> |
+                  <a href="/edit/{{u.id}}">Editar</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
